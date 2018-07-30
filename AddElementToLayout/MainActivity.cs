@@ -29,7 +29,7 @@ namespace AddElementToLayout
             Button btnResetView = FindViewById<Button>(Resource.Id.btnResetView);
 
             _layoutToAddElement.Clickable = true;
-            _layoutToAddElement.Touch += _layoutToAddElement_Touch;
+            _layoutToAddElement.Touch += LayoutToAddElement_Touch;
 
             _txtViewCount.Text = $"Views added: {_count}";
 
@@ -43,7 +43,7 @@ namespace AddElementToLayout
             _txtViewCount.Text = $"Views added: {_count}";
         }
 
-        private void _layoutToAddElement_Touch(object sender, View.TouchEventArgs e)
+        private void LayoutToAddElement_Touch(object sender, View.TouchEventArgs e)
         {
             if(e.Event.Action == MotionEventActions.Down)
             {
